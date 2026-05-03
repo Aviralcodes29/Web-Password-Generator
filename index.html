@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Password Generator - Aviral</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Password Generator</h1>
+        <p>Aviral Singh | B.Tech CSE (AI/ML)</p>
+        
+        <div class="controls">
+            <label>Length: 
+                <input type="range" id="length" min="8" max="32" value="16">
+                <span id="lengthValue">16</span>
+            </label>
+            <div class="checkboxes">
+                <label><input type="checkbox" id="letters" checked> ABC abc</label>
+                <label><input type="checkbox" id="digits" checked> 012</label>
+                <label><input type="checkbox" id="symbols" checked> !@#</label>
+            </div>
+            <button onclick="generate()">Generate Password</button>
+        </div>
+        
+        <div class="output">
+            <input type="text" id="password" readonly placeholder="Click Generate...">
+            <div class="buttons">
+                <button onclick="copyPassword()">📋 Copy</button>
+                <button onclick="generate()">🔄 New</button>
+            </div>
+        </div>
+        
+        <div class="strength" id="strength">Strength: Medium</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
